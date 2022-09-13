@@ -95,6 +95,6 @@ if (navigator.platform === 'Win32' || navigator.platform === 'Win64') {
 	app.textContent = `Это винда`
 } else if (navigator.platform === 'iPhone' || navigator.platform === 'iPad') {
 	app.textContent = `Это `
-} else if (navigator.platform === 'Android' || navigator.platform === 'MIUI') {
+} else if (navigator.platform === 'Android' || navigator.platform === 'Linux armv7l') {
 	app.textContent = `Наш брат Androit или редми`
 }
