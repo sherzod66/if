@@ -23,13 +23,16 @@ body {
 	justify-content: center;
 }
 
-.nav__container {}
+.nav__container {
+	padding: 20px;
+}
 
 .nav__title {
 	font-size: 33px;
 	line-height: 44px;
 	font-weight: 700;
 	letter-spacing: 2px;
+	text-align: center;
 }
 
 .nav__app {
