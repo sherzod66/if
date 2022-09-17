@@ -52,6 +52,7 @@ body {
 	height: 100%;
 	border: 1px solid rgb(156, 156, 156);
 	border-radius: 50%;
+	transition: all 0.4s ease 0s;
 }
 
 .circle.yellow {
