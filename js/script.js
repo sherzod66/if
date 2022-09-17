@@ -1,0 +1,165 @@
+
+
+//DOM
+
+//console.log(navigator.platform);
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+//===============================================
+//==============================================
+
+/*const block = document.querySelector('ul>li');
+
+
+block.onclick = scrollIntoView;
+
+function scrollIntoView() {
+	const sec = document.querySelector('section');
+	sec.scrollIntoView({
+		block: "center",
+		inline: "nearest",
+		behavior: "smooth"
+	});
+}
+
+
+function aniScroll() {
+	window.scrollTo({
+		top: 1550,
+		left: 0,
+		behavior: "smooth"
+	});
+};
+setTimeout(aniScroll, 1000);
+
+let scrollWidth = Math.max(
+	document.body.scrollWidth, document.documentElement.scrollWidth,
+	document.body.offsetWidth, document.documentElement.offsetWidth,
+	document.body.clientWidth, document.documentElement.clientWidth,
+);
+
+let scrollHeight = Math.max(
+	document.body.scrollHeight, document.documentElement.scrollHeight,
+	document.body.offsetHeight, document.documentElement.offsetHeight,
+	document.body.clientHeight, document.documentElement.clientHeight,
+);
+console.log(scrollWidth);
+console.log(scrollHeight);
+
+*/
+//const button = document.querySelector('.button');
+//const firstcon = document.querySelector('.content');
+
+/*button.addEventListener("click", event => {
+	firstcon.classList.toggle('click');
+});*/
+/*
+document.addEventListener("click", function (event) {
+	if (event.target.closest('.button')) {
+		firstcon.classList.toggle('click');
+	} else if (!event.target.closest('.button')) {
+		firstcon.classList.remove('click');
+	}
+})*/
+
+console.log(navigator.platform)
+const app = document.querySelector('.nav__app');
+if (navigator.platform === 'Win32' || navigator.platform === 'Win64') {
+	app.textContent = `Это винда`
+} else if (navigator.platform === 'iPhone' || navigator.platform === 'iPad') {
+	app.textContent = `Это `
+} else if (navigator.platform === 'Android') {
+	app.textContent = `Наш брат Androit`
+}
+
+const die = document.querySelector('.die');
+const passNumber = document.getElementsByClassName('die__number')[0];
+const passButton = document.querySelector('.die__item');
+const circle = document.querySelectorAll('.circle');
+const ExaminationNum = document.querySelectorAll('.die__num');
+const circleFirst = document.querySelector('._one');
+const circleTwo = document.querySelector('._two');
+const circleThree = document.querySelector('._three');
+const circleFour = document.querySelector('._four');
+console.log(passNumber);
+
+passButton.addEventListener("click", passClick);
+
+/*for (let index = 0; index < passNumber.length; index++) {
+	console.log(passNumber[index]);
+}*/
+
+const arr = [];
+const circleArray = [];
+
+function passClick(event) {
+	if (event.target.closest('.number')) {
+		if (arr.length < 4) {
+			arr.push(event.target.textContent);
+			circleArray.push('1');
+		}
+		let result = arr.join('');
+		console.log(arr);
+		console.log(+result);
+		console.log(circleArray);
+		ExaminationNum.textContent = `${+result}`;
+		showCircle();
+		removeDie();
+	} else if (event.target.closest('.die__icon')) {
+		arr.splice(-1, 1);
+		circleArray.splice(-1, 1);
+		if (circleArray.length < 1) {
+			circleFirst.classList.remove('yellow')
+		} else if (circleArray.length < 2) {
+			circleTwo.classList.remove('yellow')
+		} else if (circleArray.length < 3) {
+			circleThree.classList.remove('yellow')
+		} else if (circleArray.length < 4) {
+			circleFour.classList.remove('yellow')
+		}
+	}
+}
+
+function removeDie() {
+	if (ExaminationNum.textContent === '1234') {
+		die.remove()
+	}
+}
+function showCircle() {
+	if (circleArray.length == 1) {
+		circleFirst.classList.add('yellow')
+	} else if (circleArray.length == 2) {
+		circleTwo.classList.add('yellow')
+	} else if (circleArray.length == 3) {
+		circleThree.classList.add('yellow')
+	} else if (circleArray.length == 4) {
+		circleFour.classList.add('yellow')
+	}
+}
