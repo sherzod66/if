@@ -108,7 +108,6 @@ const circleFirst = document.querySelector('._one');
 const circleTwo = document.querySelector('._two');
 const circleThree = document.querySelector('._three');
 const circleFour = document.querySelector('._four');
-console.log(passNumber);
 
 passButton.addEventListener("click", passClick);
 
@@ -126,9 +125,6 @@ function passClick(event) {
 			circleArray.push('1');
 		}
 		let result = arr.join('');
-		console.log(arr);
-		console.log(+result);
-		console.log(circleArray);
 		ExaminationNum.textContent = `${+result}`;
 		showCircle();
 		removeDie();
