@@ -95,7 +95,9 @@ body {
 }
 
 
-.nav {}
+.nav {
+	padding: 10px;
+}
 
 .nav__container {}
 
@@ -118,6 +120,7 @@ body {
 	line-height: 44px;
 	font-weight: 700;
 	letter-spacing: 2px;
+	text-align: center;
 }
 
 .nav__app {
