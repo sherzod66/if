@@ -342,7 +342,6 @@ iconArr.forEach((item, index, array) => {
 const text = document.getElementsByClassName('list')[0];
 
 const renameText = text.innerHTML;
-console.log(text)
 
 
 
