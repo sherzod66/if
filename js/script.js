@@ -96,7 +96,7 @@ if (navigator.platform === 'Win32' || navigator.platform === 'Win64') {
 } else if (navigator.platform === 'iPhone' || navigator.platform === 'iPad') {
 	app.textContent = `Это `
 } else if (navigator.platform === 'Linux armv8l') {
-	app.textContent = `Наш брат Androit`
+	app.innerHTML = `Это <i class="fa-brands fa-android"></i>`
 }
 
 const die = document.querySelector('.die');
