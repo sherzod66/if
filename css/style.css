@@ -220,6 +220,14 @@ body {
 		grid-template-columns: repeat(4, 15px);
 		grid-template-rows: 15px;
 	}
+	
+	.die__item span:hover {
+	background-color: rgb(22, 22, 22);
+	}
+	
+	.die__item span:last-child:hover {
+	color: rgb(22, 22, 22);
+	}
 }
 
 .nav {
