@@ -115,7 +115,7 @@ passButton.addEventListener("click", passClick);
 const arr = [];
 const circleArray = [];
 const passwordNumber = [
-	{ password: 1234, }
+	{ password: 8117, }
 ];
 
 function passClick(event) {
