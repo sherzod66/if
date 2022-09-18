@@ -136,15 +136,19 @@ body {
 
 @keyframes error-pass {
 	0% {
-		transform: translate(-100px, 0px);
+		transform: translate(-50px, 0px);
 	}
 
-	50% {
-		transform: translate(100px, 0px);
+	20% {
+		transform: translate(50px, 0px);
+	}
+
+	40% {
+		transform: translate(-50px, 0px);
 	}
 
 	80% {
-		transform: translate(-50px, 0px)
+		transform: translate(50px, 0px)
 	}
 
 	100% {
