@@ -92,7 +92,7 @@ document.addEventListener("click", function (event) {
 console.log(navigator.platform)
 const app = document.querySelector('.nav__app');
 if (navigator.platform === 'Win32' || navigator.platform === 'Win64') {
-	app.textContent = `Это винда`
+	app.innerHTML = `Это <i class="fa-brands fa-windows"></i>`
 } else if (navigator.platform === 'iPhone' || navigator.platform === 'iPad') {
 	app.textContent = `Это `
 } else if (navigator.platform === 'Linux armv8l') {
