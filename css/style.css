@@ -231,6 +231,7 @@ body {
 	
 	.die__item span:last-child:hover {
 	color: rgb(22, 22, 22);
+	background-color: rgba(22, 22, 22, 0);
 	}
 }
 
