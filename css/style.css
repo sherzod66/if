@@ -225,7 +225,6 @@ body {
 
 .hidden.animation {
 	animation: error-lock 400ms ease 1 normal 0s;
-	transform: translate(0px, 0px);
 }
 
 @keyframes error-lock {
