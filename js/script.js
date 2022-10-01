@@ -89,7 +89,6 @@ document.addEventListener("click", function (event) {
 	}
 })*/
 
-console.log(navigator.platform)
 const app = document.querySelector('.nav__app');
 if (navigator.platform === 'Win32' || navigator.platform === 'Win64') {
 	app.innerHTML = `Это <i class="fa-brands fa-windows"></i>`
@@ -109,7 +108,7 @@ const circleThree = document.querySelector('._three');
 const circleFour = document.querySelector('._four');
 const nav = document.querySelector('.nav');
 const lock = document.querySelector('.hidden');
-console.log(passNumber);
+
 
 passButton.addEventListener("click", passClick);
 
@@ -127,9 +126,6 @@ function passClick(event) {
 			circleArray.push('1');
 		}
 		let result = arr.join('');
-		console.log(arr);
-		console.log(+result);
-		console.log(circleArray);
 		ExaminationNum.textContent = `${+result}`;
 		showCircle();
 		removeDie();
