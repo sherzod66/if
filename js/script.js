@@ -89,12 +89,13 @@ document.addEventListener("click", function (event) {
 	}
 })*/
 
+console.log(navigator.platform)
 const app = document.querySelector('.nav__app');
 if (navigator.platform === 'Win32' || navigator.platform === 'Win64') {
 	app.innerHTML = `Это <i class="fa-brands fa-windows"></i>`
 } else if (navigator.platform === 'iPhone' || navigator.platform === 'iPad') {
 	app.textContent = `Это `
-} else if (navigator.platform === 'Linux armv8l' || navigator.platform === 'Linux aarch64') {
+} else if (navigator.platform === 'Linux armv8l') {
 	app.innerHTML = `Это <i class="fa-brands fa-android"></i>`
 }
 const die = document.querySelector('.die');
@@ -108,9 +109,10 @@ const circleThree = document.querySelector('._three');
 const circleFour = document.querySelector('._four');
 const nav = document.querySelector('.nav');
 const lock = document.querySelector('.hidden');
+const audio = new Audio('./sound/click.aac')
+console.log(passNumber);
 
-
-passButton.addEventListener("click", passClick);
+passButton.addEventListener("mousedown", passClick);
 
 
 const arr = [];
@@ -121,11 +123,15 @@ const passwordNumber = [
 
 function passClick(event) {
 	if (event.target.closest('.number')) {
+		audio.play();
 		if (arr.length < 4) {
 			arr.push(event.target.textContent);
 			circleArray.push('1');
 		}
 		let result = arr.join('');
+		console.log(arr);
+		console.log(+result);
+		console.log(circleArray);
 		ExaminationNum.textContent = `${+result}`;
 		showCircle();
 		removeDie();
@@ -200,3 +206,7 @@ lock.addEventListener("click", function (event) {
 		document.body.style = '';
 	}
 });
+
+function sound() {
+	audio.play();
+}
