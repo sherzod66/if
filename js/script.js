@@ -5,7 +5,7 @@ if (navigator.platform === 'Win32' || navigator.platform === 'Win64') {
 	app.innerHTML = `Это <i class="fa-brands fa-windows"></i>`
 } else if (navigator.platform === 'iPhone' || navigator.platform === 'iPad') {
 	app.textContent = `Это `
-} else if (navigator.platform === 'Linux armv8l' && navigator.platform === 'Linux aarch64') {
+} else if (navigator.platform === 'Linux armv8l' || navigator.platform === 'Linux aarch64') {
 	app.innerHTML = `Это <i class="fa-brands fa-android"></i>`
 }
 const die = document.querySelector('.die');
