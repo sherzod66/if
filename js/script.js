@@ -81,7 +81,7 @@ function removeDie() {
 	else {
 		if (arr.length === 4) {
 			setTimeout(function () {
-				window.navigator.vibrate([500, 500, 500]);
+				window.navigator.vibrate([200, 200, 200]);
 				arr.splice(0, arr.length);
 				circleArray.splice(0, circleArray.length);
 				circleFirst.classList.remove('yellow');
