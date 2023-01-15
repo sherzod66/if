@@ -171,7 +171,6 @@ function removeDie() {
 	else {
 		if (arr.length === 4) {
 			setTimeout(function () {
-				vibrate();
 				arr.splice(0, arr.length);
 				circleArray.splice(0, circleArray.length);
 				circleFirst.classList.remove('yellow');
@@ -180,6 +179,7 @@ function removeDie() {
 				circleFour.classList.remove('yellow');
 				passNumber.classList.add('animation');
 				lock.classList.add('animation');
+				vibrate();
 			}, 200)
 		} else {
 			passNumber.classList.remove('animation')
